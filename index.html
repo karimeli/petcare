@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetCare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>PetCare</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#vets">Veterinarios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Bienvenido a PetCare</h1>
+  </div>
+
+  <div id="search" class="container">
+    <div class="pet-search">
+      <h2>Busca la raza de tu mascota</h2>
+      <input type="text" placeholder="Buscar raza de perro o gato" id="breed-search">
+      <button onclick="searchPets()">Buscar</button>
+      <div id="search-results"></div>
+      <div id="breed-image"></div> <!-- Aquí se mostrará la imagen del perro -->
+    </div>
+  </div>
+
+ 
+
+  <script>
+    async function searchPets() {
+      const breed = document.getElementById('breed-search').value.toLowerCase();
+      if (!breed) {
+        alert("Por favor, ingrese una raza para buscar.");
+        return;
+      }
+
+      try {
+        // URL para obtener la lista de razas de perros desde la API de Dog CEO
+        const apiUrl = `https://dog.ceo/api/breeds/list/all`;
+
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (data.status === "success") {
+          const breeds = Object.keys(data.message); // Lista de razas
+
+          // Comprobar si la raza ingresada está en la lista de razas
+          const resultsDiv = document.getElementById('search-results');
+          const imageDiv = document.getElementById('breed-image');
+          resultsDiv.innerHTML = ''; // Limpiar resultados previos
+          imageDiv.innerHTML = ''; // Limpiar imagen previa
+
+          if (breeds.includes(breed)) {
+            // Mostrar mensaje de éxito
+            resultsDiv.innerHTML = `<p>¡Raza encontrada! ${breed}</p>`;
+            
+            // Obtener imagen de la raza específica
+            const breedImageUrl = `https://dog.ceo/api/breed/${breed}/images/random`;
+
+            const imageResponse = await fetch(breedImageUrl);
+            const imageData = await imageResponse.json();
+
+            if (imageData.status === "success" && imageData.message) {
+              const image = imageData.message;
+              imageDiv.innerHTML = `<img src="${image}" alt="${breed}" style="max-width: 100%; height: auto;">`;
+            } else {
+              imageDiv.innerHTML = `<p>No se pudo obtener la imagen para la raza ${breed}.</p>`;
+            }
+          } else {
+            resultsDiv.innerHTML = `<p>No se encontró la raza: ${breed}</p>`;
+          }
+        } else {
+          alert("Hubo un error al obtener las razas de perros.");
+        }
+      } catch (error) {
+        console.error("Error al buscar razas de perros:", error);
+        alert("Hubo un error al buscar las razas de perros.");
+      }
+    }
+  </script>
+
+  <script src="search.js"></script>
+</body>
+
+</html>
