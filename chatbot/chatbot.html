@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consejos</title>
     <link rel="stylesheet" href="chatbot.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "@google/generative-ai": "https://esm.run/@google/generative-ai"
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>Consejos</h1>
@@ -22,13 +29,37 @@
     <!-- Botón para redirigir al index.html -->
     <button onclick="goToIndex()">Volver al inicio</button>
 
-    <script src="chatbot.py"></script>
-
     <script>
         // Función para redirigir al archivo index.html
         function goToIndex() {
-            window.location.href = "../inicio/index.html"; // Cambia "index.html" si el archivo tiene otro nombre o ruta
+            window.location.href = "../inicio/index.html";
         }
+    </script>
+
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+
+        const API_KEY = 'AIzaSyCsvI1C1zfboB5qa2369W-VJ490sxmhA6s'; 
+        const genAI = new GoogleGenerativeAI(API_KEY);
+
+        const form = document.getElementById('ai-form');
+        const inputText = document.getElementById('inputText');
+        const responseContainer = document.getElementById('response');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const prompt = inputText.value;
+            const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
+
+            try {
+                const result = await model.generateContent(prompt);
+                const response = await result.response;
+                responseContainer.innerText = await response.text();
+            } catch (error) {
+                console.error('Error al generar contenido:', error);
+                responseContainer.innerText = 'Ocurrió un error al generar la respuesta.';
+            }
+        });
     </script>
 </body>
 </html>
