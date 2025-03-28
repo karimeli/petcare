@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consejos</title>
+    <link rel="stylesheet" href="chatbot.css">
 </head>
 <body>
+    <h1>Integración con Geminis AI</h1>
     
+    <!-- Formulario para interactuar con la API -->
+    <form id="ai-form">
+        <label for="inputText">Ingrese texto:</label>
+        <input type="text" id="inputText" name="inputText" required>
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <h2>Resultado:</h2>
+    <pre id="response"></pre>
+
+    <!-- Botón para redirigir al index.html -->
+    <button onclick="goToIndex()">Volver al inicio</button>
+
+    <script src="chatbot.js"></script>
+
+    <script>
+        // Función para redirigir al archivo index.html
+        function goToIndex() {
+            window.location.href = "../inicio/index.html";; // Cambia "index.html" si el archivo tiene otro nombre o ruta
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,101 @@
+/* Reset de márgenes y bordes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecer fuente base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Fondo de la página */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #6D4C41; /* Color marrón suave, como el pelaje de mascotas */
+    margin-bottom: 20px;
+}
+
+/* Formulario de entrada */
+form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilos para el campo de texto */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #FFB74D; /* Naranja suave */
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Cambio de borde al enfocarse */
+input[type="text"]:focus {
+    border-color: #FF7043; /* Naranja más fuerte */
+    outline: none;
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #FFB74D; /* Naranja suave */
+    color: #fff;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF7043; /* Naranja más fuerte */
+}
+
+/* Estilo para el área de respuesta */
+h2 {
+    margin-top: 40px;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #6D4C41;
+}
+
+pre {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 1rem;
+}
+
+/* Estilos para la animación de carga */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #FFB74D;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
