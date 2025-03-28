@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>veterinarias </title>
+    <title>veterinarias</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOrjAqUp_FzBCFbYeNuwUv7xYPWvcj2ZY" async defer></script>
     <link rel="stylesheet" href="map.css">
     <style>
@@ -17,6 +17,8 @@
 <body>
     <h1>veterinarias</h1>
     <div id="map"></div> <!-- Contenedor del mapa -->
+
+    <button onclick="volverAlInicio()">Volver al Inicio</button> <!-- Botón para redirigir -->
 
     <script>
         // Función de inicialización del mapa
@@ -36,7 +38,13 @@
                 map: mapa
             });
         }
+
+        // Función para redirigir al archivo index.html
+        function volverAlInicio() {
+            window.location.href = "index.html"; // Cambiar la URL a la página de inicio
+        }
     </script>
-      <script src="maps.js"></script>
+
+    <script src="maps.js"></script>
 </body>
 </html>
