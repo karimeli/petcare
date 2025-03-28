@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mejores veterinarias de Cuu</title>
+    <title>veterinarias </title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <link rel="stylesheet" href="map.css">
+    <style>
+        /* Estilo para el contenedor del mapa */
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>veterinarias</h1>
+    <div id="map"></div> <!-- Contenedor del mapa -->
+
+    <script>
+        // Función de inicialización del mapa
+        function initMap() {
+            // Coordenadas del centro del mapa
+            const centro = { lat: -34.397, lng: 150.644 };
+
+            // Crear el mapa centrado en las coordenadas
+            const mapa = new google.maps.Map(document.getElementById("map"), {
+                zoom: 8,
+                center: centro
+            });
+
+            // Agregar un marcador en el centro
+            const marcador = new google.maps.Marker({
+                position: centro,
+                map: mapa
+            });
+        }
+    </script>
+      <script src="maps.js"></script>
 </body>
 </html>
