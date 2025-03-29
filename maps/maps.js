@@ -1,4 +1,4 @@
-function initMap() {
+function iniciarMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 28.632, lng: -106.0691 }, // Chihuahua, México
         zoom: 12,
@@ -43,4 +43,10 @@ function initMap() {
         });
     });
 }
+
+// Función para redirigir al archivo index.html dentro de la carpeta "inicio"
+function volverAlInicio() {
+    window.location.href = "../inicio/index.html";
+}
+
 

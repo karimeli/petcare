@@ -1,50 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>veterinarias</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOrjAqUp_FzBCFbYeNuwUv7xYPWvcj2ZY" async defer></script>
+    <title>Maps</title>
     <link rel="stylesheet" href="map.css">
     <style>
-        /* Estilo para el contenedor del mapa */
         #map {
-            height: 500px;
-            width: 100%;
+            height: 80vh;
+            width: 80%;
         }
     </style>
 </head>
 <body>
-    <h1>veterinarias</h1>
-    <div id="map"></div> <!-- Contenedor del mapa -->
+    <div id="map"></div>
 
-    <button onclick="volverAlInicio()">Volver al Inicio</button> <!-- Botón para redirigir -->
+    <!-- Botón para redirigir al index.html -->
+    <button onclick="goToIndex()">Volver al inicio</button>
 
     <script>
-        // Función de inicialización del mapa
-        function initMap() {
-            // Coordenadas del centro del mapa
-            const centro = { lat: -34.397, lng: 150.644 };
-
-            // Crear el mapa centrado en las coordenadas
-            const mapa = new google.maps.Map(document.getElementById("map"), {
-                zoom: 8,
-                center: centro
-            });
-
-            // Agregar un marcador en el centro
-            const marcador = new google.maps.Marker({
-                position: centro,
-                map: mapa
-            });
-        }
-
-        // Función para redirigir al archivo index.html dentro de la carpeta "inicio"
-        function volverAlInicio() {
+        // Función para redirigir al archivo index.html
+        function goToIndex() {
             window.location.href = "../inicio/index.html";
         }
     </script>
-
     <script src="maps.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbrVtgPu3D02FMXAhfvbaCdXiP56i8r38&callback=iniciarMap" async defer></script>
 </body>
 </html>
