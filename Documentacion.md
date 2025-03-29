@@ -43,3 +43,19 @@ Abre chatbot/chatbot.html.
 Utiliza el cuadro de chat para escribir dudas comunes sobre el cuidado de mascotas.
 Recibe respuestas automáticas del asistente virtual.
 
+Este proyecto fue elaborado en la materia de aplicaciones web orientadas a servicios por los alumnos Bertrand Ponce Johan y Carlos Hernandez Karim, y se ulirizaron las apis de google maps, Geminis ia, dog api ademas para resolver dudas se utilizo el siguiente libro
+Van Lancker, L. (2013). Los API JavaScript de HTML5: Integre la potencia de HTML5 en sus aplicaciones Web. Ediciones ENI.
+
+ademas se utilizo  siguientes videos como informacion informal :
+https://www.youtube.com/watch?v=4puAwNfX-Uw&t=7s
+y en este se utilizo los siguientes links:
+🖥 HitFilm Express: https://fxhome.com/hitfilm-express    / fxhome   @FXhome
+🖥 MySql Workbench: https://www.mysql.com/products/workbench    / mysqlchannel  
+🖥 WAMP Server: http://www.wampserver.com/en   / wampserver64  
+🖥 VirtualBox: https://www.virtualbox.org
+🖥 Sublime Text: https://www.sublimetext.com/
+🖥 Google Chrome: https://www.google.com/intl/es-419/ch... @googlechrome
+🖥 Unity: @Unity - https://unity3d.com/es/get-unity/down...
+y el otro vide que se utlizo fue:
+https://www.youtube.com/watch?v=HtLfFlqyiIs
+
