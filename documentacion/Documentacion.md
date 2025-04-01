@@ -3,7 +3,7 @@ Búsqueda de veterinarias.
 Visualización de veterinarias en un mapa interactivo.
 Chatbot para resolver dudas básicas sobre mascotas.
 
-📋 Requisitos y Estructura del Proyecto
+Requisitos y Estructura del Proyecto
 Requisitos
 Navegador web moderno ( Microsoft Edge)
 Conexión a Internet
