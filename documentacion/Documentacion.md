@@ -9,9 +9,7 @@ Navegador web moderno ( Microsoft Edge)
 Conexión a Internet
 
 Estructura del Proyecto
-python
-Copy
-Edit
+
 petcare/
 ├── chatbot/
 │   ├── chatbot.html        # Interfaz del chatbot
