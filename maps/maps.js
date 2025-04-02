@@ -6,24 +6,24 @@ function iniciarMap() {
 
     const veterinarias = [
         { 
-            lat: 28.6354, lng: -106.0843, 
-            name: "Hospital Veterinario del Valle", 
-            address: "Av. Homero 2311, Col. Valle Verde, Chihuahua, Chih." 
+            lat: 28.636904, lng: -106.09103, 
+            name: "URUZ Clinica veterinaria", 
+            address: "Av. Mirador 2704-B, Campestre-Lomas, 31205 Chihuahua, Chih." 
         },
         { 
-            lat: 28.6275, lng: -106.0762, 
-            name: "Clínica Veterinaria Chihuahua", 
-            address: "Calle 24ª 2201, Col. Santo Niño, Chihuahua, Chih." 
+            lat: 28.673154, lng: -106.028621, 
+            name: "Dr. Kiry hospital veterinario.", 
+            address: "club de Leones de Chihuahua 101, Fraccionamiento resistencial el leon, 31313 Chihuahua, Chih." 
         },
         { 
-            lat: 28.6432, lng: -106.0795, 
-            name: "VetMédica", 
-            address: "Av. Teófilo Borunda 1301, Col. San Felipe, Chihuahua, Chih." 
+            lat: 28.635169, lng: -106.086542, 
+            name: "Veterinaria Pet's Medical Center", 
+            address: "C. 16 1301, Mirador, 31205 Chihuahua, Chih" 
         },
         { 
-            lat: 28.6518, lng: -106.0994, 
-            name: "Centro Veterinario Can Cat", 
-            address: "Av. Tecnológico 3800, Col. Nombre de Dios, Chihuahua, Chih." 
+            lat: 28.632556, lng: -106.075919, 
+            name: "Veterinaria Sigala ", 
+            address: "Av. Melchor Ocampo 1406, Zona Centro, 31000 Chihuahua, Chih" 
         },
     ];
 
